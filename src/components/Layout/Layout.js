@@ -5,7 +5,7 @@ import BotIcon from "../BotIcon/BotIcon";
 const Layout = ({ children }) => {
   return (<>
     <Header/>
-    {/* <BotIcon/> */}
+    <BotIcon/>
     {children}
     <Footer />
   </>);

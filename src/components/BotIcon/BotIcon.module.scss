@@ -1,13 +1,11 @@
 .BotIcon{
-    position: fixed;
-    right: 0;
-    bottom: 20vh;
-    transform: scale(.5);
-    transform-origin: right;
-    .iconBody{
+    transition:.5s all;
+      .iconBody{
         position: fixed;
         right: 0;
         bottom: 20vh;
+        transform: scale(.5);
+        transform-origin: right;
     }
     .open{
         position: fixed;
