@@ -1,0 +1,41 @@
+.Bot{
+    position: absolute;
+    top: 40vh;
+    left: 25%;
+    width: 50%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    >div:last-child{
+        width: 600px;
+        margin-left: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .prompts{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            div{
+                background-color: rgba(30, 30, 30, 0.486);
+                color: #fff;
+                padding: 15px;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+    h1{
+        color: #fff;
+        font-size: 48px;
+    }
+    input{
+        padding: 10px 20px;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+        height: 60px;
+        width: 100%;
+        font-size: 26px;
+    }
+}

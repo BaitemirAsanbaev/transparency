@@ -3,24 +3,39 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  flex-wrap: wrap;
   // flex: 100% 1 1;
+  
   li{
     cursor: pointer;
-    margin: 0 30px;
+    margin: 0 20px;
     a{
-      color: #fff;
+      color: #023D84;
       text-decoration: none;
       font-size: 20px;
     }
+  }
+  .login{
+    background-color: #023D84;
+    a{
+      color: #fff;
+    }
+  }
+  .register{
+    border: 2px solid #023D84;
+  }
+  .login, .register{
+    padding: 10px 20px;
+    border-radius: 10px;
   }
   .burger{
     display: none;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
   .NavLinks{
     li{
-      margin: 0 10px;
+      margin: 10px;
     }
     .burger{
       display: block!important;

@@ -1,0 +1,35 @@
+.BotIcon{
+    position: fixed;
+    right: 0;
+    bottom: 20vh;
+    transform: scale(.5);
+    transform-origin: right;
+    .iconBody{
+        position: fixed;
+        right: 0;
+        bottom: 20vh;
+    }
+    .open{
+        position: fixed;
+        right: 0;
+        bottom: 20vh;
+    }
+    .icon{
+        position: relative;
+        z-index: 2;
+    }
+    .hide{
+        position: relative;
+        bottom: 370px;
+        left: 220px;
+        z-index: 3;
+        cursor: pointer;
+    }
+    .link{
+        position: relative;
+        bottom: 70px;
+        left: 260px;
+        z-index: 3;
+        cursor: pointer;
+    }
+}
