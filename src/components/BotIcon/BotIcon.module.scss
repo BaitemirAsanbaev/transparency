@@ -1,0 +1,141 @@
+// .BotIcon {
+//   position: fixed;
+//   bottom: 20px;
+//   right: 20px;
+//   transition: transform 1s ease-in-out;
+//   .iconBody {
+//     position: fixed;
+//     right: 0;
+//     bottom: 20vh;
+//     transform: scale(0.5);
+//     transform-origin: right;
+//   }
+//   .open {
+//     position: fixed;
+//     right: 0;
+//     bottom: 20vh;
+//   }
+//   .icon {
+//     position: relative;
+//     z-index: 2;
+//   }
+//   .hide {
+//     position: relative;
+//     bottom: 370px;
+//     left: 220px;
+//     z-index: 3;
+//     cursor: pointer;
+//   }
+//   .link {
+//     position: relative;
+//     bottom: 70px;
+//     left: 260px;
+//     z-index: 3;
+//     cursor: pointer;
+//   }
+// }
+.BotIcon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  transition: transform 0.5s ease-in-out;
+  opacity: 1;
+  transform: translateX(0);
+
+  &.onTop {
+    transform: translateX(500px);
+  }
+
+  &.closed {
+    opacity: 0;
+    transform: translateX(500px);
+    pointer-events: none;
+  }
+
+  .iconBody {
+    position: fixed;
+    right: 0;
+    bottom: 20vh;
+    transform-origin: right;
+    transition: transform 0.5s ease-in-out;
+    opacity: 1;
+
+    &.closed {
+      opacity: 0;
+    }
+  }
+
+  .open {
+    position: fixed;
+    right: 0;
+    bottom: 20vh;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+    z-index: -1;
+
+    &.active {
+      opacity: 1;
+      pointer-events: auto;
+      z-index: 2;
+    }
+  }
+
+  .hide {
+    position: absolute;
+    bottom: 70px;
+    left: 260px;
+    z-index: 3;
+    cursor: pointer;
+    transition: opacity 0.5s ease-in-out;
+    width: 16px;
+    height: 16px;
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 3;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &.active {
+      opacity: 0;
+      pointer-events: none;
+      z-index: -1;
+    }
+  }
+
+  .link {
+    position: absolute;
+    bottom: 20px;
+    left: 160px;
+    z-index: 3;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 3;
+
+    &.active {
+      opacity: 0;
+      pointer-events: none;
+      z-index: -1;
+    }
+  }
+
+  .icon {
+    position: relative;
+    z-index: 2;
+    width: 32px;
+    height: 32px;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+
+    &.active {
+      opacity: 0;
+    }
+  }
+}
