@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom'
 import burger from '../../../../assets/images/burger.svg'
 import classes from './NavLinks.module.scss'
 
-const NavLinks = ({ pages, drawer=false, open, close }) => {
+const NavLinks = ({ pages, drawer=false, open, close, openModal }) => {
   return (<ul className={classes.NavLinks}>
     {pages ?
       <>
@@ -12,8 +12,8 @@ const NavLinks = ({ pages, drawer=false, open, close }) => {
         <li className={`${classes.pagesLink} ${drawer ? classes.drawerLink : null}`}><NavLink onClick={close} to='/help'>Помощь</NavLink></li>
       </> :
       <>
-        <li className={classes.login}><NavLink to='/login'>Войти</NavLink></li>
-        <li className={classes.register}><NavLink to='/register'>Регистрация</NavLink></li>
+        <li onClick={()=>openModal("login")} className={classes.login}><span>Войти</span></li>
+        <li onClick={()=>openModal("register")} className={classes.register}><span>Регистрация</span></li>
         <li className={classes.burger} onClick={open}><img src={burger} alt='burger' /></li>
         </>
     }
