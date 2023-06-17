@@ -1,11 +1,9 @@
 import { MenuSlider } from "../modules/MenuSlider";
+import Slider from "../modules/Slider/Slider";
 
 const Home = () => {
   return ( <div>
-    <MenuSlider/>
-    <MenuSlider/>
-    <MenuSlider/>
-    <MenuSlider/>
+<Slider/>
   </div> );
 }
  
