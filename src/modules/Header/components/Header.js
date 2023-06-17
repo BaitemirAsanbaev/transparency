@@ -13,6 +13,8 @@ export const Header = () => {
   const url = useHref()
   const [img, setImg] = useState('')
   const [open, setOpen] = useState(false)
+  
+  const [extended, setExtended] = useState(false)
   const pages = [
     '/',
     '/menu',
@@ -35,8 +37,8 @@ useEffect(()=>{
 }, [url])
   return ( <header style={{height:'100vh'}}>
     <Nav open={()=>setOpen(true)}/>
-    {url==='/'?<><Bot/>
-    <Services/></>:null}
+    {url==='/'?<><Bot extended={extended} setExtended={setExtended}/>
+    {!extended?<Services/>:null}</>:null}
     <Drawer isOpen={open} close={()=>setOpen(false)}/>
     <Backdrop close={()=>setOpen(false)} isOpen={open}/>
     {pages.includes(url) ? <Banner img={img}/> : null}
