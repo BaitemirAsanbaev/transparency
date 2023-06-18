@@ -32,6 +32,15 @@ const NavLinks = ({ pages, drawer = false, open, close, openModal }) => {
               Профиль
             </NavLink>
           </li>
+          <li
+            className={`${classes.pagesLink} ${
+              drawer ? classes.drawerLink : null
+            }`}
+          >
+            <NavLink onClick={close} to="/institution">
+              Университеты
+            </NavLink>
+          </li>
         </>
       ) : (
         <>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import cl from "./styles/Profile.module.scss";
 import icon1 from "../assets/images/i1.svg";
 import icon2 from "../assets/images/i2.svg";
@@ -9,6 +9,7 @@ import icon5 from "../assets/images/i5.svg";
 
 import Application from "../modules/Header/components/ProfileComponents/Application/Application";
 import ProfileData from "../modules/Header/components/ProfileComponents/ProfileData/ProfileData";
+import axios from "axios";
 
 const Profile = () => {
   const [input, setInput] = useState(true);
@@ -20,16 +21,65 @@ const Profile = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
 
+  const [avatar, setAvatar] = useState("");
+  const [newAvatar, setNewAvatar] = useState("");
+
+  const fetchProfile = async () => {
+    const token = localStorage.getItem("jwtToken");
+    try {
+      const response = await axios.get("http://192.168.134.64:8000/profile/", {
+        headers: {
+          Authorization: `Token ` + token,
+        },
+      });
+      setAvatar(response.data.avatar);
+    } catch (error) {
+      console.error(error);
+    }
+  };useEffect(()=>{
+    fetchProfile()
+  }, [newAvatar, avatar])
+
+  const handleImageChange = async (event) => {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onloadend = async () => {
+      const base64Data = reader.result.split(",")[1];
+      const token = localStorage.getItem("jwtToken");
+      try {
+        const response = await axios.post(
+          "http://192.168.134.64:8000/profile/update/",
+          {
+            avatar: base64Data,
+            phone_number: "09998899",
+          },
+          {
+            headers: {
+              Authorization: `Token ${token}`,
+            },
+          },
+        );
+        setAvatar(response.data.avatar);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+  };
+
   return (
     <main className={cl.Profile}>
       {input ? (
         <section className={cl.profileInfo}>
           <div className={cl.avatar}>
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvt4yWLvj5ofcvt-mRi1qgfVt7X8YHDa2KV1qnaGRqtA&s"
-              alt=""
-            />
-            <button className={cl.btn} onClick={(e) => setInput(false)}>
+            <img src={`data:image/jpeg;base64,${avatar}`} alt="" />
+            <input type="file" onChange={(e) => handleImageChange(e)} />
+            <button
+              className={cl.btn}
+              onClick={(e) => {
+                setInput(false);
+              }}
+            >
               изменить
             </button>
           </div>
@@ -40,7 +90,7 @@ const Profile = () => {
                 <img src={icon1} alt="icon1 icon" />
                 <div className={cl.inner}>
                   <h6>Фамилия Имя</h6>
-                  <h3>Курбанов Амит сексигерл</h3>
+                  <h3>Курбанов Амит </h3>
                 </div>
               </div>
             </div>
@@ -48,8 +98,8 @@ const Profile = () => {
               <div className={cl.inputInfo}>
                 <img src={icon2} alt="icon1 icon" />
                 <div className={cl.inner}>
-                  <h6>Фамилия Имя</h6>
-                  <h3>Курбанов Амит сексигерл</h3>
+                  <h6>Дата рождения</h6>
+                  <h3>14.11.01 </h3>
                 </div>
               </div>
             </div>
@@ -57,8 +107,8 @@ const Profile = () => {
               <div className={cl.inputInfo}>
                 <img src={icon3} alt="icon1 icon" />
                 <div className={cl.inner}>
-                  <h6>Фамилия Имя</h6>
-                  <h3>Курбанов Амит сексигерл</h3>
+                  <h6>язык</h6>
+                  <h3>русский </h3>
                 </div>
               </div>
             </div>
@@ -66,8 +116,8 @@ const Profile = () => {
               <div className={cl.inputInfo}>
                 <img src={icon4} alt="icon1 icon" />
                 <div className={cl.inner}>
-                  <h6>Фамилия Имя</h6>
-                  <h3>Курбанов Амит сексигерл</h3>
+                  <h6>Почта</h6>
+                  <h3>amit@gmail.com </h3>
                 </div>
               </div>
             </div>
@@ -75,8 +125,8 @@ const Profile = () => {
               <div className={cl.inputInfo}>
                 <img src={icon5} alt="icon1 icon" />
                 <div className={cl.inner}>
-                  <h6>Фамилия Имя</h6>
-                  <h3>Курбанов Амит сексигерл</h3>
+                  <h6>Phone number</h6>
+                  <h3>+996500023120 </h3>
                 </div>
               </div>
             </div>
