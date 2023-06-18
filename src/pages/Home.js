@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import cls from "./styles/Home.module.scss";
-import kinder from "../assets/img/Frame.png";
-import school from "../assets/img/Biometrics_icon.png";
-import uni from "../assets/img/graduation-cap.png";
-import robot from "../assets/img/robot.png";
-import robotIcon1 from "../assets/img/Vector.png";
-import robotIcon2 from "../assets/img/second.png";
-import robotIcon3 from "../assets/img/third.png";
-import arrow from "../assets/img/arrow-right.png";
-import send from "../assets/img/send.png";
+import React, { useState } from 'react';
+import cls from './styles/Home.module.scss';
+import kinder from '../assets/img/Frame.png';
+import school from '../assets/img/Biometrics_icon.png';
+import uni from '../assets/img/graduation-cap.png';
+import robot from '../assets/img/robot.png';
+import robotIcon1 from '../assets/img/Vector.png';
+import robotIcon2 from '../assets/img/second.png';
+import robotIcon3 from '../assets/img/third.png';
+import arrow from '../assets/img/arrow-right.png';
+import send from '../assets/img/send.png';
 
 const Home = () => {
   const [checkboxChecked, setCheckboxChecked] = useState({
@@ -24,70 +24,30 @@ const Home = () => {
     }));
   };
   const kinderOption = () => {
-    setOption("garden");
+    setOption('garden');
   };
   const schoolOption = () => {
-    setOption("school");
+    setOption('school');
   };
   const universityOption = () => {
-    setOption("univer");
+    setOption('univer');
   };
   return (
     <div className={cls.wrapper}>
-      <div className={cls.botBox}>
-        <img src={robot} alt="robot" className={cls.robot} />
-        <div className={cls.robotNebenBox}>
-          <div className={cls.roboBoxTop}>
-            <a href="#" className={cls.boxOption}>
-              <img src={robotIcon1} alt="robo" width="20px" height="35px" />
-              <p>Стоимость записи</p>
-              <img src={arrow} alt="robo" width="30px" height="30px" />
-            </a>
-            <a href="#" className={cls.boxOption}>
-              <img src={robotIcon2} alt="robo" width="30px" height="25px" />
-              <p>О системе</p>
-              <img src={arrow} alt="robo" width="30px" height="30px" />
-            </a>
-            <a href="#" className={cls.boxOption}>
-              <img src={robotIcon3} alt="robo" width="25px" height="30px" />
-              <p>Документы для регистрации</p>
-              <img src={arrow} alt="robo" width="30px" height="30px" />
-            </a>
-          </div>
-          <form className={cls.roboForm}>
-            <input
-              type="text"
-              name="robot"
-              placeholder="Введите запрос..."
-              className={cls.roboInp}
-            />
-            <button type="submit" className={cls.roboBtn}>
-              <img src={send} alt="send" width="35px" height="35px" />
-            </button>
-          </form>
-        </div>
-      </div>
       <div className={cls.options}>
         <div
-          className={
-            option == "garden" ? cls.KindergartenActive : cls.Kindergarten
-          }
-          onClick={kinderOption}
-        >
+          className={option == 'garden' ? cls.KindergartenActive : cls.Kindergarten}
+          onClick={kinderOption}>
           <h1>Kindergarden</h1>
           <img src={kinder} alt="kinder" className={cls.kinderImg} />
         </div>
-        <div
-          className={option == "school" ? cls.SchoolActive : cls.School}
-          onClick={schoolOption}
-        >
+        <div className={option == 'school' ? cls.SchoolActive : cls.School} onClick={schoolOption}>
           <h1>School</h1>
           <img src={school} alt="school" className={cls.schoolImg} />
         </div>
         <div
-          className={option == "univer" ? cls.UniversityActive : cls.University}
-          onClick={universityOption}
-        >
+          className={option == 'univer' ? cls.UniversityActive : cls.University}
+          onClick={universityOption}>
           <h1>University</h1>
           <img src={uni} alt="univer" className={cls.uniImg} />
         </div>
