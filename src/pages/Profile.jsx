@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import cl from "./styles/Profile.module.scss";
-import human from "../assets/images/human.png";
+import icon1 from "../assets/images/i1.svg";
+import icon2 from "../assets/images/i2.svg";
+import icon3 from "../assets/images/i3.svg";
+import icon4 from "../assets/images/i4.svg";
+import icon5 from "../assets/images/i5.svg";
+
+
 import Application from "../modules/Header/components/ProfileComponents/Application/Application";
 import ProfileData from "../modules/Header/components/ProfileComponents/ProfileData/ProfileData";
 
@@ -31,7 +37,7 @@ const Profile = () => {
             <h2>Личные данные</h2>
             <div className={cl.cont}>
               <div className={cl.inputInfo}>
-                <img src={human} alt="human icon" />
+                <img src={icon1} alt="icon1 icon" />
                 <div className={cl.inner}>
                   <h6>Фамилия Имя</h6>
                   <h3>Курбанов Амит сексигерл</h3>
@@ -40,7 +46,7 @@ const Profile = () => {
             </div>
             <div className={cl.cont}>
               <div className={cl.inputInfo}>
-                <img src={human} alt="human icon" />
+                <img src={icon2} alt="icon1 icon" />
                 <div className={cl.inner}>
                   <h6>Фамилия Имя</h6>
                   <h3>Курбанов Амит сексигерл</h3>
@@ -49,7 +55,7 @@ const Profile = () => {
             </div>
             <div className={cl.cont}>
               <div className={cl.inputInfo}>
-                <img src={human} alt="human icon" />
+                <img src={icon3} alt="icon1 icon" />
                 <div className={cl.inner}>
                   <h6>Фамилия Имя</h6>
                   <h3>Курбанов Амит сексигерл</h3>
@@ -58,7 +64,7 @@ const Profile = () => {
             </div>
             <div className={cl.cont}>
               <div className={cl.inputInfo}>
-                <img src={human} alt="human icon" />
+                <img src={icon4} alt="icon1 icon" />
                 <div className={cl.inner}>
                   <h6>Фамилия Имя</h6>
                   <h3>Курбанов Амит сексигерл</h3>
@@ -67,7 +73,7 @@ const Profile = () => {
             </div>
             <div className={cl.cont}>
               <div className={cl.inputInfo}>
-                <img src={human} alt="human icon" />
+                <img src={icon5} alt="icon1 icon" />
                 <div className={cl.inner}>
                   <h6>Фамилия Имя</h6>
                   <h3>Курбанов Амит сексигерл</h3>
@@ -97,7 +103,7 @@ const Profile = () => {
             <h2>Личные данные</h2>
             <div className={cl.cont}>
               <div className={cl.inputInfo}>
-                <img src={human} alt="human icon" />
+                <img src={icon1} alt="icon1 icon" />
                 <div className={cl.inner}>
                   <h6>Фамилия Имя</h6>
                   <input
@@ -112,7 +118,7 @@ const Profile = () => {
             </div>
             <div className={cl.cont}>
               <div className={cl.inputInfo}>
-                <img src={human} alt="human icon" />
+                <img src={icon1} alt="icon1 icon" />
                 <div className={cl.inner}>
                   <h6>Фамилия Имя</h6>
                   <input
@@ -127,7 +133,7 @@ const Profile = () => {
             </div>
             <div className={cl.cont}>
               <div className={cl.inputInfo}>
-                <img src={human} alt="human icon" />
+                <img src={icon1} alt="icon1 icon" />
                 <div className={cl.inner}>
                   <h6>Фамилия Имя</h6>
                   <input
@@ -142,7 +148,7 @@ const Profile = () => {
             </div>
             <div className={cl.cont}>
               <div className={cl.inputInfo}>
-                <img src={human} alt="human icon" />
+                <img src={icon1} alt="icon1 icon" />
                 <div className={cl.inner}>
                   <h6>Фамилия Имя</h6>
                   <input
@@ -157,7 +163,7 @@ const Profile = () => {
             </div>
             <div className={cl.cont}>
               <div className={cl.inputInfo}>
-                <img src={human} alt="human icon" />
+                <img src={icon1} alt="icon1 icon" />
                 <div className={cl.inner}>
                   <h6>Фамилия Имя</h6>
                   <input

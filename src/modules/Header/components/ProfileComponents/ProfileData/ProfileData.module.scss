@@ -26,23 +26,48 @@
       }
     }
   }
+
+  .kq{
+    display: flex;
+    align-items: flex-start;
+    padding-top: 30px;
+
+  }
   .list {
     display: flex;
     flex-direction: column;
-    width: 90%;
-    margin: 0 auto;
-    // background-color: #d0d0d0;
+    width: 900px;
+    margin-left: 50px;
     padding: 50px;
     .btns {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 50%;
+      width: 100%;
       padding: 20px;
+      .download {
+        display: flex;
+        align-items: center;
+
+        button {
+          padding: 5px 15px;
+          border: 1px solid #0d4cd3;
+          color: white;
+          background-color: #0d4cd3;
+          border-radius: 5px;
+        }
+      }
       h3 {
         font-size: 44px;
         color: #0d4cd3;
       }
     }
   }
+}
+
+.itemInfo{
+  width: 850px;
+  height: 400px;
+  background-color: aliceblue;
+  padding: 50px;
 }

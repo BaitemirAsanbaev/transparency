@@ -1,8 +1,7 @@
 .Profile {
   width: 100%;
-  padding: 150px 0;
+  padding: 20px 0;
   .profileInfo {
-//     padding: 150px 0;
     display: flex;
     align-items: flex-start;
     width: 90%;
@@ -83,6 +82,7 @@
             h3 {
               font-size: 22px;
               color: #0d4cd3;
+              font-weight: 400;
             }
           }
         }
