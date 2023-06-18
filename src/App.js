@@ -1,10 +1,12 @@
 import Layout from './components/Layout/Layout';
-import { Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import NotFound from "./pages/NotFound";
-import styles from "./style/global.module.scss";
-import Profile from "./pages/Profile";
+import { Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import NotFound from './pages/NotFound';
+import styles from './style/global.module.scss';
+import Profile from './pages/Profile';
 import InstitutionPage from './pages/Institution';
+import './App.css';
+
 const App = () => {
   return (
     <div className={styles.app}>
