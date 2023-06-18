@@ -15,16 +15,16 @@
       font-size: 20px;
     }
   }
-  .login{
+  .login, .logout{
     background-color: #023D84;
-    a{
+    span{
       color: #fff;
     }
   }
   .register{
     border: 2px solid #023D84;
   }
-  .login, .register{
+  .login, .register, .logout{
     padding: 10px 20px;
     border-radius: 10px;
   }

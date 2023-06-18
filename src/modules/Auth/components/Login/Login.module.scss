@@ -1,0 +1,16 @@
+.Login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    button{
+        width: 100%;
+        margin: 10px 0;
+    }
+    .RegisterLink{
+        
+        cursor: pointer;
+        margin: 10px;
+        color: #023D84;
+    }
+}

@@ -1,0 +1,22 @@
+.Card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    >div:last-child{
+        display: flex;
+        flex-direction: column;
+        max-width: 500PX;
+        padding: 20px 100px;
+
+    }
+    >div>div:not(:first-child){
+        margin: 40px 0;
+    }
+    >div:first-child{
+        width: 50vw;
+        height: 50vh;
+        background-size: cover;
+    }
+}

@@ -1,0 +1,10 @@
+.ChatInput{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    >div{
+        position: relative;
+        right: 50px;
+        cursor: pointer;
+    }
+}

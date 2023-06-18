@@ -3,11 +3,11 @@ import Logo from '../../../../components/UI/Logo/Logo';
 import NavLinks from '../NavLinks/NavLinks';
 import classes from './Nav.module.scss'
 
-const Nav = ({open}) => {
+const Nav = ({open, openModal}) => {
   return (<nav className={classes.Nav}>
       <Logo/>
       <NavLinks pages={true}/>
-      <NavLinks pages={false} open={open}/>
+      <NavLinks pages={false} open={open}  openModal={openModal}/>
     </nav>
   )
 }

@@ -1,1 +1,0 @@
-export {MenuSlider} from './components/MenuSlider'
