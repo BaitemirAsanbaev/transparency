@@ -1,0 +1,326 @@
+.wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+    .botBox{
+        width: 100%;
+        height: 500px;
+        background: linear-gradient(190.17deg, #1F50E8 15.95%, #7996F0 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        
+        .robot{
+            width: 200px ;
+            height: 200px;
+        }
+
+        .robotNebenBox{
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            
+            .roboBoxTop{
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                gap: 15px;
+
+                .boxOption{
+                    padding: 10px 15px;
+                    border-radius: 10px ;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    background: rgba(255, 255, 255, 0.17);
+                    height: 50px;
+                    color: white;
+                    font-size: 18px;
+                }
+            }
+            .roboForm{
+                width: 100%;
+                height: 50px;
+                border-radius: 10px;
+                background-color: white;
+                display: flex;
+                align-items: center;
+
+                .roboInp{
+                    width: 90%;
+                    height: 100%;
+                    border-radius: 10px;
+                    outline: none;
+                    border: none;
+                    padding: 5px 15px;
+                    font-size: 19px;
+                }
+
+                .roboBtn{
+                    width: 10%;
+                    height: 100%;
+                    border-radius: 10px;
+                    background-color: white;
+                    border: none;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+
+    .options{
+        width: 100%;
+        padding: 0px 10%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        .Kindergarten{
+            width: 370px;
+            height: 220px;
+            border-radius: 20px;
+            background: linear-gradient(103.68deg, #1E8572 10.48%, #0AC598 105.16%);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;  
+            cursor: pointer;
+            color: white;
+            
+
+            .kinderImg{
+                width: 100px;
+                height: 100px;
+            }
+        }
+        .KindergartenActive{
+            order: 3;
+            width: 80%;
+            height: 250px;
+            border-radius: 20px;
+            background: linear-gradient(103.68deg, #1E8572 10.48%, #0AC598 105.16%);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;  
+            cursor: pointer;
+            color: white;
+
+            h1{
+                font-size: 52px;
+                text-transform: uppercase;
+            }
+            .kinderImg{
+                width: 200px;
+                height: 200px;
+            }
+        }
+        .School{
+            width: 370px;
+            height: 220px;
+            border-radius: 20px;
+            background: linear-gradient(294.13deg, #1E93D5 2.99%, #836AC9 96.92%);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;  
+            cursor: pointer;
+            color: white;
+
+            .schoolImg{
+                width: 120px;
+                height: 120px;
+            }
+        }
+        .SchoolActive{
+            order: 3;
+            width: 80%;
+            height: 250px;
+            border-radius: 20px;
+            background: linear-gradient(294.13deg, #1E93D5 2.99%, #836AC9 96.92%);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;  
+            cursor: pointer;
+            color: white;
+
+            h1{
+                font-size: 52px;
+                text-transform: uppercase;
+            }
+
+            .schoolImg{
+                width: 200px;
+                height: 200px;
+            }
+        }
+        .University{
+            width: 370px;
+            height: 220px;
+            border-radius: 20px;
+            background: linear-gradient(294.13deg, #1E93D5 2.99%, #836AC9 96.92%);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;  
+            cursor: pointer;
+            color: white;
+
+            .uniImg{
+                width: 120px;
+                height: 120px;
+            }
+        }
+        .UniversityActive{
+            order: 3;
+            width: 80%;
+            height: 250px;
+            border-radius: 20px;
+            background: linear-gradient(294.13deg, #1E93D5 2.99%, #836AC9 96.92%);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;  
+            cursor: pointer;
+            color: white;
+
+            h1{
+                font-size: 52px;
+                text-transform: uppercase;
+            }
+
+            .uniImg{
+                width: 200px;
+                height: 200px;
+            }
+        }
+    }
+    .results{
+        width: 100%;
+        padding: 0px 11%;
+        display: flex;
+        justify-content: space-between;
+
+        .left{
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+
+            .leftHead{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                padding:10px 15px;
+                background: linear-gradient(190.17deg, #1F50E8 15.95%, #7996F0 100%);
+                color: white;
+                font-size: 20px;
+            }
+            .leftContent{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                padding: 15px;
+                gap: 15px;
+                background-color: #e5e5e5;
+
+                div{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-size: 17px;
+
+                    input{
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        appearance: none;
+                        border-radius: 100%;
+                        width: 20px;
+                        height: 20px;
+                        border: 2px solid blue;
+                        transition: 0.2s all linear;
+                        outline: none;
+                        position: relative;
+                    }
+                    input:checked {
+                        border: 6px solid blue;
+                      }
+                }
+            }
+        }
+        .right{
+            width: 70%;
+            display: flex;
+            flex-wrap:wrap;
+            gap: 30px;
+
+            .card{
+                width: 250px ;
+                height: 320px;
+                display: flex;
+                flex-direction: column;
+                border-radius: 5px;
+
+                .cardImg{
+                    width: 100%;
+                    height: 80%;
+                    border-radius: 5px;
+                    box-shadow: 0px 0px 15px 10px #e5e5e5;
+                }
+                .cardBottom{
+                    width: 100%;
+                    height: 20%;
+                    text-align: center;
+                    color: black;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .rate {
+                        margin: auto;
+                        height: 40px;
+                        padding: 0 10px;
+                    }
+                    .rate:not(:checked) > input {
+                        position:absolute;
+                        top:-9999px;
+                    }
+                    .rate:not(:checked) > label {
+                        float:right;
+                        width:1em;
+                        overflow:hidden;
+                        white-space:nowrap;
+                        cursor:pointer;
+                        font-size:25px;
+                        color:#ccc;
+                    }
+                    .rate:not(:checked) > label:before {
+                        content: '★ ';
+                    }
+                    .rate > input:checked ~ label {
+                        color: #ffc700;    
+                    }
+                    .rate:not(:checked) > label:hover,
+                    .rate:not(:checked) > label:hover ~ label {
+                        color: #deb217;  
+                    }
+                    .rate > input:checked + label:hover,
+                    .rate > input:checked + label:hover ~ label,
+                    .rate > input:checked ~ label:hover,
+                    .rate > input:checked ~ label:hover ~ label,
+                    .rate > label:hover ~ input:checked ~ label {
+                        color: #c59b08;
+                    }
+                }
+            }
+        }
+    }
+}
