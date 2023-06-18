@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import cl from "./styles/Profile.module.scss";
 import human from "../assets/images/human.png";
+import Application from "../modules/Header/components/ProfileComponents/Application/Application";
+import ProfileData from "../modules/Header/components/ProfileComponents/ProfileData/ProfileData";
 
 const Profile = () => {
   const [input, setInput] = useState(true);
-  const [status, setStatus] = useState("rejeckted");
+  
 
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
@@ -171,189 +173,9 @@ const Profile = () => {
           </div>
         </section>
       )}
-      <section className={cl.application}>
-        <h2>Ваши Заявки</h2>
-        <aside className={cl.applicationCont}>
-          <div className={cl.title}>
-            <h3>Учреждения</h3>
-            <h3>Дата Заявки</h3>
-            <h3>Статус Заявок</h3>
-          </div>
-          <div className={cl.content}>
-            <span>
-              <img src={human} alt="" />
-              <h5>Первый уник</h5>
-            </span>
-            <span>
-              <p>04 Dec 2019</p>
-            </span>
-            {status === "approved" ? (
-              <button>Принято</button>
-            ) : status === "rejeckted" ? (
-              <button style={{ color: "red", borderColor: "red" }}>
-                Отклонено
-              </button>
-            ) : status === "pending" ? (
-              <button
-                style={{
-                  color: "#FFAB00",
-                  border: "1px solid  ",
-                  borderColor: "#FFAB00",
-                }}
-              >
-                В ожидании
-              </button>
-            ) : (
-              <button>Неизвестный статус</button>
-            )}
-          </div>
-          <div className={cl.content}>
-            <span>
-              <img src={human} alt="" />
-              <h5>Первый уник</h5>
-            </span>
-            <span>
-              <p>04 Dec 2019</p>
-            </span>
-            {status === "approved" ? (
-              <button>Принято</button>
-            ) : status === "rejeckted" ? (
-              <button style={{ color: "red", borderColor: "red" }}>
-                Отклонено
-              </button>
-            ) : status === "pending" ? (
-              <button
-                style={{
-                  color: "#FFAB00",
-                  border: "1px solid  ",
-                  borderColor: "#FFAB00",
-                }}
-              >
-                В ожидании
-              </button>
-            ) : (
-              <button>Неизвестный статус</button>
-            )}
-          </div>
-          <div className={cl.content}>
-            <span>
-              <img src={human} alt="" />
-              <h5>Первый уник</h5>
-            </span>
-            <span>
-              <p>04 Dec 2019</p>
-            </span>
-            {status === "approved" ? (
-              <button>Принято</button>
-            ) : status === "rejeckted" ? (
-              <button style={{ color: "red", borderColor: "red" }}>
-                Отклонено
-              </button>
-            ) : status === "pending" ? (
-              <button
-                style={{
-                  color: "#FFAB00",
-                  border: "1px solid  ",
-                  borderColor: "#FFAB00",
-                }}
-              >
-                В ожидании
-              </button>
-            ) : (
-              <button>Неизвестный статус</button>
-            )}
-          </div>
-          <div className={cl.content}>
-            <span>
-              <img src={human} alt="" />
-              <h5>Первый уник</h5>
-            </span>
-            <span>
-              <p>04 Dec 2019</p>
-            </span>
-            {status === "approved" ? (
-              <button>Принято</button>
-            ) : status === "rejeckted" ? (
-              <button style={{ color: "red", borderColor: "red" }}>
-                Отклонено
-              </button>
-            ) : status === "pending" ? (
-              <button
-                style={{
-                  color: "#FFAB00",
-                  border: "1px solid  ",
-                  borderColor: "#FFAB00",
-                }}
-              >
-                В ожидании
-              </button>
-            ) : (
-              <button>Неизвестный статус</button>
-            )}
-          </div>
-        </aside>
-      </section>
+      <Application/>
 
-      <section className={cl.checkBigCont}>
-        <div className={cl.checkCont}>
-          <h3>Необходимые данные</h3>
-          <article>
-            <input type="radio" name="school" id="school1" />
-            <label htmlFor="school1">Детский сад</label>
-          </article>
-          <br />
-          <article>
-            <input type="radio" name="school" id="school2" />
-            <label htmlFor="school2">Школа</label>
-          </article>
-          <br />
-          <article>
-            <div>
-              <input type="radio" name="school" id="school3" />
-              <label htmlFor="school3">ОРТ</label>
-            </div>
-            <div></div>
-          </article>
-        </div>
-        <div className={cl.list}>
-          <button className={cl.btns} style={{ display: "flex" }}>
-            <h3>ORT</h3>
-            <input
-              className={cl.inputs}
-              type="file"
-              accept="image/png"
-              onInput={(e) => console.log(e.target.value)}
-            />
-          </button>
-          <button className={cl.btns} style={{ display: "flex" }}>
-            <h3>ORT</h3>
-            <input
-              className={cl.inputs}
-              type="file"
-              accept="image/png"
-              onInput={(e) => console.log(e.target.value)}
-            />
-          </button>
-          <button className={cl.btns} style={{ display: "flex" }}>
-            <h3>ORT</h3>
-            <input
-              className={cl.inputs}
-              type="file"
-              accept="image/png"
-              onInput={(e) => console.log(e.target.value)}
-            />
-          </button>
-          <button className={cl.btns} style={{ display: "flex" }}>
-            <h3>ORT</h3>
-            <input
-              className={cl.inputs}
-              type="file"
-              accept="image/png"
-              onInput={(e) => console.log(e.target.value)}
-            />
-          </button>
-        </div>
-      </section>
+      <ProfileData/>
     </main>
   );
 };
