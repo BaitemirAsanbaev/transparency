@@ -5,6 +5,7 @@ import Modal from "../../../../components/UI/Modal/Modal";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { signup } from "../../../../store/AuthSlice";
+import { useNavigate } from "react-router";
 
 const Register = ({ opened, close, change }) => {
   const dispatch = useDispatch();
@@ -15,8 +16,11 @@ const Register = ({ opened, close, change }) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate()
   function register() {
     dispatch(signup({ username, password, email }));
+    navigate('/', {replace:true})
+    close()
   }
   if (token) {
     return null;

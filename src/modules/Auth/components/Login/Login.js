@@ -5,13 +5,17 @@ import FormInput from "../../../../components/UI/FormInput/FormInput";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { signin } from "../../../../store/AuthSlice";
+import { useNavigate } from "react-router";
 
 const Login = ({ opened, close, change }) => {
   const dispatch = useDispatch();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate()
   function login() {
     dispatch(signin({ password, username }));
+    navigate('/', {replace:true})
+    close()
   }
   return (
     <>
