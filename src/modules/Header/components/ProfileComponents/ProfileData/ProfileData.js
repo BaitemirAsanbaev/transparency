@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import axios from "axios";
 import cl from "./ProfileData.module.scss";
 
 const ProfileData = () => {
   const [selectedOption, setSelectedOption] = useState("");
   const [selectedItemInfo, setSelectedItemInfo] = useState("");
+  const [file, setFile] = useState(null);
 
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
@@ -12,6 +14,29 @@ const ProfileData = () => {
 
   const handleItemClick = (itemInfo) => {
     setSelectedItemInfo(itemInfo);
+  };
+
+  const handleFileUpload = (event) => {
+    const uploadedFile = event.target.files[0];
+    setFile(uploadedFile);
+  };
+
+  const handleSubmit = async () => {
+    try {
+      const formData = new FormData();
+      formData.append("file", file);
+
+      // Отправка данных на бекенд
+      const response = await axios.post("/api/upload", formData);
+      console.log(response.data); // Ответ от бекенда
+
+      // Сброс формы
+      setSelectedOption("");
+      setSelectedItemInfo("");
+      setFile(null);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
@@ -66,9 +91,9 @@ const ProfileData = () => {
                     className={cl.inputs}
                     type="file"
                     accept="image/png"
-                    onInput={(e) => console.log(e.target.value)}
+                    onChange={handleFileUpload}
                   />
-                  <button>Загрузка</button>
+                  <button onClick={handleSubmit}>Загрузка</button>
                 </div>
               </button>
             )}
@@ -82,9 +107,9 @@ const ProfileData = () => {
                     className={cl.inputs}
                     type="file"
                     accept="image/png"
-                    onInput={(e) => console.log(e.target.value)}
+                    onChange={handleFileUpload}
                   />
-                  <button>Загрузка</button>
+                  <button onClick={handleSubmit}>Загрузка</button>
                 </div>
               </button>
             )}
@@ -98,9 +123,9 @@ const ProfileData = () => {
                     className={cl.inputs}
                     type="file"
                     accept="image/png"
-                    onInput={(e) => console.log(e.target.value)}
+                    onChange={handleFileUpload}
                   />
-                  <button>Загрузка</button>
+                  <button onClick={handleSubmit}>Загрузка</button>
                 </div>
               </button>
             )}
