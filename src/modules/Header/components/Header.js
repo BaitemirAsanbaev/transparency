@@ -7,7 +7,7 @@ import Drawer from './Drawer/Drawer';
 import Backdrop from '../../../components/UI/Backdrop/Backdrop';
 import Bot from './Bot/Bot';
 
-export const Header = ({ openModal }) => {
+export const Header = ({ openReport, openModal }) => {
   const location = useLocation();
   const url = useHref();
   const [img, setImg] = useState('');
@@ -16,7 +16,7 @@ export const Header = ({ openModal }) => {
 
   return (
     <header style={location.pathname === '/' ? { height: '110vh' } : { height: '15vh' }}>
-      <Nav open={() => setOpen(true)} openModal={openModal} />
+      <Nav open={() => setOpen(true)} openModal={openModal} openReport={openReport} />
       {url === '/' ? <Bot extended={extended} setExtended={setExtended} /> : null}
       {url === '/' ? <Banner img={homeHeader} /> : null}
       <Drawer isOpen={open} close={() => setOpen(false)} />

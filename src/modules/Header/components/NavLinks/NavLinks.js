@@ -4,7 +4,7 @@ import classes from "./NavLinks.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../../../store/AuthSlice";
 
-const NavLinks = ({ pages, drawer = false, open, close, openModal }) => {
+const NavLinks = ({ pages, drawer = false, open, close, openModal, openReport }) => {
   const token = useSelector((state) => state.auth.token);
   const dispatch = useDispatch()
   function logoutHandler(){
@@ -40,6 +40,16 @@ const NavLinks = ({ pages, drawer = false, open, close, openModal }) => {
             <NavLink onClick={close} to="/institution">
               Университеты
             </NavLink>
+          </li>
+          <li
+          onClick={()=>{openReport(true)}}
+            className={`${classes.pagesLink} ${
+              drawer ? classes.drawerLink : null
+            }`}
+          >
+            <span >
+              Жалобы
+            </span>
           </li>
         </>
       ) : (

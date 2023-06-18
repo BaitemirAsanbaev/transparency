@@ -1,7 +1,8 @@
 import classes from "./Login.module.scss";
 import Modal from "../../../../components/UI/Modal/Modal";
+
+import FormInput from '../../../../components/UI/FormInput/FormInput'
 import Button from "../../../../components/UI/Button/Button";
-import FormInput from "../../../../components/UI/FormInput/FormInput";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { signin } from "../../../../store/AuthSlice";
